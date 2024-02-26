@@ -1,0 +1,20 @@
+<p>
+  home works!
+</p>
+
+<button (click)="showAlert()">Show Alert</button>
+
+<button (click)="showDeletionAlert()">Delete</button>
+
+<button (click)="addItem()">Add</button>
+
+<!-- {{ arr | json }} -->
+
+<div *ngFor="let item of arr">
+  
+  
+  <div (click)="delete(item)" [style.background-color]=" +item % 2 == 0 ? 'green' : 'yellow' " [style.color]="'red'">
+    {{item}}
+  </div>
+
+</div>
